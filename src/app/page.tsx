@@ -10,6 +10,7 @@ import MetanetTestTwo from "@/components/metanet-test-two";
 import MetanetTestThree from "@/components/metanet-test-three";
 import MetanetTestFour from "@/components/metanet-test-four";
 import MetanetTestFive from "@/components/metanet-test-five";
+import MetanetTestFivePartTwo from "@/components/metanet-test-five-part-two";
 
 interface TabPanelProps {
   children?: React.ReactNode;
@@ -72,7 +73,8 @@ export default function Home() {
           <Tab label="Test No.2" {...a11yProps(1)} />
           <Tab label="Test No.3" {...a11yProps(2)} />
           <Tab label="Test No.4" {...a11yProps(3)} />
-          <Tab label="Test No.5" {...a11yProps(4)} />
+          <Tab label="Test No.5.1" {...a11yProps(4)} />
+          <Tab label="Test No.5.2" {...a11yProps(5)} />
         </Tabs>
       </Box>
       <CustomTabPanel value={value} index={0}>
@@ -89,6 +91,9 @@ export default function Home() {
       </CustomTabPanel>
       <CustomTabPanel value={value} index={4}>
         <MetanetTestFive />
+      </CustomTabPanel>
+      <CustomTabPanel value={value} index={5}>
+        <MetanetTestFivePartTwo />
       </CustomTabPanel>
     </Box>
   );
